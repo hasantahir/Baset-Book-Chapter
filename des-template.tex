@@ -11,6 +11,7 @@
 \usepackage{subcaption}
 \usepackage{siunitx}
 \sisetup{group-separator = {,}}
+\usepackage[version=3]{mhchem}
 % 
 % 
 % 
@@ -127,7 +128,7 @@ Substrate Thickness ($\mu m$) & f (GHz) & Bandwidth (GHz) &  $\mathrm{S_{11}}$ (
 \label{table:2}
 \end{table}
 % 
-As shown by the results, substrate thickness of \SI{7}{\um} generates the best resonance with $\mathrm{S_{11}}$ of \SI{-41}{\dB}, and a bandwidth of \SI{192}{\GHz}. The selection of substrate thickness is therefore a critical design parameter, which strongly affects the antenna resonance. For wearable electronic applications, a substrate material having flexibility is an essential requirement. In order to compare the performance of different types of flexible substrate materials, $\mu_c$ of \SI{0.2}{\eV}, and $\tau$ equal to \SI{0.8}{\ps} are selected. From Fig. \ref{Fig 4}, polyimide substrate performs the best in terms of the $\mathrm{S_{11}}$ of \SI{-42}{\dB}. Polyimide substrate is appropriate for applications demanding a high degree of dimensional stability in extreme environmental conditions. Moreover, polyimide offers a high flexibility and low profile making it the perfect substrate material for printed fabrication techniques. On the other hand, Rogers 3006 substrate yielded a return loss of  \SI{-40.6}{\dB}, and for polyethylene terephthalate (PET), it was \SI{-30}{\dB}. For paper, the return loss was \SI{-30}{\dB}. 
+As shown by the results, substrate thickness of \SI{7}{\um} generates the best resonance with $\mathrm{S_{11}}$ of \SI{-41}{\dB}, and a bandwidth of \SI{192}{\GHz}. The selection of substrate thickness is therefore a critical design parameter, which strongly affects the antenna resonance. For wearable electronic applications, a substrate material having flexibility is an essential requirement. In order to compare the performance of different types of flexible substrate materials, $\mu_c$ of \SI{0.2}{\eV}, and $\tau$ equal to \SI{0.8}{\ps} are selected. From Fig. \ref{Fig 4}, polyamide substrate (dielectric constant,$ \epsilon_r $= 4.5 and loss tangent, $\tan \alpha $= 0.0027) performs the best in terms of the $\mathrm{S_{11}}$ of \SI{-42}{\dB}. Polyamide substrate is appropriate for applications demanding a high degree of dimensional stability in extreme environmental conditions. Moreover, polyamide offers a high flexibility and low profile making it the perfect substrate material for printed fabrication techniques. On the other hand, Rogers 3006 substrate yielded a return loss of  \SI{-40.6}{\dB}, and for polyethylene terephthalate (PET), it was \SI{-30}{\dB}. For paper, the return loss was \SI{-30}{\dB}. 
 
 The tunability of graphene is shown in Fig. \ref{Fig 5}, where the resonant frequency is changed with the help of chemical doping and applying an external voltage bias. Table \ref{table:3} provides a comparison of the three different resonant frequencies obtained for a substrate of thickness \SI{7}{\um}. All the frequencies have approximately the same $\mathrm{S_{11}}$ with the notable difference in bandwidth, which increases as the chemical potential increases. On the other hand, the transmission range gets lower when the electric potential is increased due to an increased absorption. In Figs. \ref{FIG 6} and \ref{FIG 7}, the radiation patterns illustrate high main lobe magnitudes along with lower back lobes levels. The main lobe magnitude in the E-plane starts from \SI{2.93}{\dB} at a chemical potential of \SI{0.2}{\eV}, and with increased $\mu_c$ the main lobe magnitude decreases to \SI{1.51}{\dB} at \SI{0.3}{\eV}, and \SI{-1.41}{\dB} at \SI{0.4}{\eV}.The proposed design suggests that the graphene-based patch antenna resonates at different frequencies in the THz band, \SI{4.546}{\THz}, \SI{4.636}{\THz} and \SI{5.347}{\THz} when the chemical potential and relaxation time are varied. Furthermore, changing the chemical potential leads to an increase in bandwidth from \SI{199}{\GHz} at\SI{0.2}{\eV} to \SI{314}{\GHz} at \SI{0.4}{\eV}. On the other hand, chemical potential affects the radiation pattern by increasing the side lobe and reducing the directivity of the proposed antenna. Analysis has also been performed to evaluate the antenna bandwidth and reflection coefficient ($\mathrm{S_{11}}$) at resonant frequencies. A comparison between different flexible substrates allows to evaluate the effect of substrate material on the antenna performance. A graphene-based antenna with polyamide substrate shows the maximum $\mathrm{S_{11}}$ of \SI{-42}{\dB}.
 % 
@@ -194,52 +195,57 @@ The demand for wearable devices is expected to increase to \num{187.2}  million 
 \label{Fig 8}
 \end{figure}
 % 
-Figure \ref{Fig 8}a shows the geometry and parameters of the proposed CPW fed antenna. The proposed antenna is designed using CST Microwave Studio \SI{2018}. The designed graphene-based antenna is tested in simulation at the room temperature of \SI{293}{\kelvin}. The antenna design with dimensions of \SI{260}{\um} \times\SI{195}{\um} \times \SI{0.35}{\nm} two layers of graphene,consisting of a graphene-based rectangular patch with feedline \SI{120}{\um} \times \SI{100}{\um} \times \SI{0.35}{\nm} made from graphene.
-
-The substrate material supervises the variation in radiation qualities of the graphene antenna. Rogers \num{3006} is used as substrate with thickness of \SI{175}{\um} (dielectric constant,$\varepsilon_r = 6.5$, loss tangent, $\tan {\alpha} = 0.002$. Three layers of human skin model as shown in \ref{Fig 8}b, the thickness of which differ between various human skins. For the epidermis, the typical thickness ranges from \num{0.05} to \SI{1.5}{\mm}, \SI{1.5e-4}{\mm} for the dermis, the hypodermis has no typical value \cite{dashti2018graphene}. The epidermis contains two layers, stratum corneum with only dead squamous cells and the living epidermis layer, where most of the skin pigmentation stay.\cite{abadal2015time}. The stratum corneum is a thin accumulation on the skin outer surface. The dermis, that supports the epidermis, is thicker and mainly composed of collagen fibers and intertwined elastic fibers enmeshed in a gellike matrix. The subcutaneous fat layer is composed of the packed cells with considerable fat, where the boundary is not well defined, thus, the thickness of this layer differs widely for various part of the human body. The permittivity of the human skin tissues can be obtained using,\cite{berry2003optical} \cite{yang2015numerical}.
+Figure \ref{Fig 8}a shows the geometry and parameters of the proposed co-planar waveguide (CPW) fed antenna. The antenna design is simulated in CST Microwave Studio 2018 at room temperature (\SI{293}{\kelvin}). The antenna design has the dimensions of \SI{260}{\um} by\SI{195}{\um} by \SI{0.35}{\nm}, with two layers of graphene, and consists of a graphene-based rectangular patch with a feedline \SI{120}{\um} by \SI{100}{\um} by \SI{0.35}{\nm} made from graphene. Rogers \num{3006}, having a dielectric constant of $\varepsilon_r = 6.5$, and loss tangent, $\tan {\alpha} = 0.002$ is used as substrate with a thickness of \SI{175}{\um}. Three layers of human skin model as shown in Fig. \ref{Fig 8}b, the thickness of which differ between various human skins. For the epidermis, the typical thickness ranges from  \SIrange{.05}{1.5}{\mm}, whereas the dermis is typically \SI{1.5e-4}{\mm}. The hypodermis, on the other hand has no typical value \cite{dashti2018graphene}. The epidermis is sibdivided into two further layers, stratum corneum with only dead squamous cells and the living epidermis layer, where most of the skin pigmentation stay \cite{abadal2015time}. The stratum corneum is a thin accumulation on the skin outer surface. The dermis, that supports the epidermis, is thicker and mainly composed of collagen fibers and intertwined elastic fibers enmeshed in a gel-like matrix. The subcutaneous fat layer is composed of the packed cells with considerable fat, where the boundary is not well defined, thus, the thickness of this layer differs widely for various part of the human body. The real ($\varepsilon^-$) and imaginary ($\varepsilon^=$) parts of the permittivity of the human skin tissues can be obtained using \cite{berry2003optical,yang2015numerical},
 % 
-\begin{equation}
-   \epsilon^- =n^2-e^2
-   \label{eq:real perimttivity}
-\end{equation}
-% 
-\begin{equation}
-\epsilon^= =2nk
+\begin{subequations}
+\begin{align}
+   \varepsilon^- &= n^2-k^2,
+   \label{eq:real perimttivity} \\
+    \varepsilon^= &= 2nk
 \label{eq:imag perimttivity}
-\end{equation}
+\end{align}
+\label{eq:permititivty}
+\end{subequations}
 % 
-where $\epsilon^-$ and $\epsilon^=$ are respectively, the real and imaginary parts of the permittivity of the tissues,\SI{n} is the refractive index, and \SI{k} is the extinction coefficient. The refractive index is \SI{1.97}, \SI{1.73} and \SI{1.58} for blood, skin, and fat, respectively \cite{yang2015numerical}. The extinction coefficient is calculated using the measured absorption coefficient data available in \cite{fitzgerald2003catalogue} \cite{berry2003optical} through,
+where  $n$ is the refractive index, and $k$ is the extinction coefficient. The refractive indices for blood, skin, and fat are \num{1.97}, \num{1.73} and \num{1.58} respectively \cite{yang2015numerical}. The extinction coefficient is calculated using the measured absorption coefficient data available in \cite{fitzgerald2003catalogue,berry2003optical} through,
+% 
 \begin{equation}
 k=\frac{\alpha\lambda_0}{4\pi}
 \label{eq:abdorption}
 \end{equation}
 % 
-where $\lambda_0 = c/f$ is the wavelength in free-space, and $\alpha$  absorption coefficient.Figure \ref{Fig 8AE} demonstrates the scattering parameter ($\mathrm{S_{11}}$) in free space. It has been observed that resonant frequency can be shifted towards lower range with the increase in length patch from \SI{195}{\um} to\SI{215}{\um}. The $\mathrm{S_{11}}$ of the graphene patch antenna is \SI{-46}{\dB} at \SI{0.647}{\THz} obtained with length of \SI{195}{\nu_m}. The antenna gives a wide bandwidth \SI{29.2}{\GHz} which is the main advantage of this high frequency at wearable applications. Various parameters such as gain, reflection coefficient, efficiency, and radiation pattern of the proposed antenna are compared under free space and on body conditions. From figure \ref{Fig 8B}, the reflection coefficient of the patch antenna in the on-body state is shifted slightly towards the right side of the \SI{0.6482}{\THz} resonant frequency.
+where $\lambda_0$ is the free-space wavelength, and $\alpha$ is the absorption coefficient. 
+
+Figure \ref{Fig 8AE} demonstrates the scattering response of the graphene antenna in free-space. It is observed that resonant frequency can be downshifted with an increase in the patch length, in this case, from \SI{195}{\um} to\SI{215}{\um}. The $\mathrm{S_{11}}$ of the graphene patch antenna is \SI{-46}{\dB} at \SI{0.647}{\THz} obtained with length of \SI{195}{\um}. A wide  bandwidth of \SI{29.2}{\GHz} is also obtained which is an added advantage for wearable applications. Next, a comparison of antenna performance parameters is presented in a free-space environment and the on-body condition. From Fig. \ref{Fig 8B}, the reflection coefficient of the patch antenna in the on-body state is shifted slightly towards the right side of the \SI{0.6482}{\THz} resonant frequency.
 % 
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.6\textwidth]{9}
-    \caption{$\mathrm{S_{11}}$ of the antenna with different patch length}
+    \caption{$\mathrm{S_{11}}$ of the antenna with different patch lengths.}
     \label{Fig 8AE}
 \end{figure}
+% 
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.6\textwidth]{10}
-    \caption{$\mathrm{S_{11}}$ at On-body and free space.}
+    \caption{$\mathrm{S_{11}}$ in the on-body and free-space conditions.}
     \label{Fig 8B}
 \end{figure}
+% 
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.6\textwidth]{11}
-    \caption{Simulation gain and directivity on free space and on Body}
+    \caption{Simulation gain and directivity in free-space and on-body conditions.}
     \label{Fig 8AA}
 \end{figure}
+% 
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.55\textwidth]{12}
-    \caption{Radiation and total efficiency on Free space and on Body}
+    \caption{Radiation and total efficiencies in free-space and on-body conditions.}
     \label{Fig 91}
 \end{figure}
+% 
 \begin{figure}[hbt!]
 \begin{subfigure}{.5\textwidth}
 \centering
@@ -253,22 +259,32 @@ where $\lambda_0 = c/f$ is the wavelength in free-space, and $\alpha$  absorptio
   \caption{E plane}
   \label{fig:sfig2}
 \end{subfigure}
-\caption{The Hand E-plane radiation patterns of the graphene patch antenna and on and space}
+\caption{The H- and E-plane radiation patterns of the graphene patch antenna in the on-body and free-space conditions.}
 \label{fig 14b}
 \end{figure}
-The $\mathrm{S_{11}}$ parameter of the graphene patch antenna on the body is \SI{-25}{\dB}. The detuning of frequency is due to the high dielectric constant property of three layers of the human body. Because of these properties of the human body, most of the radiated waves propagate through the body and dissipate in the form of heat resulting in a wider\SI{-10}{\dB} bandwidth. Due to the body absorption, the antenna gains decrease from \SI{-7.8}{\dB}  to \SI{-7.2}{\dB}. The gain of the antenna is a figure of merit of how well the antenna converts delivered power into radiated waves toward a specified direction.The decrease of the gain in the on body state is accompanied with an increase in the directivity. It is clear from figure \ref{Fig 8AA}  that for the antenna in the on body case, the value of gain at \SI{0.647}{\THz} decreases by \SI{0.3}{\dB}, while the directivity increased by \SI{3}{\dB}. The lower gain value obtained due to a decrease in the radiation efficiency, down from 96\% to almost 50\% (Figure \ref{Fig 91}). Therefore, the total radiated efficiency of antenna on flat body phantom decreases by (46\%). This is due to the higher conductivity of the outer most layer skin. The antenna total efficiency in the presence of the human body also decreases due to absorption in the lossy human body tissues. 
+% 
+The $\mathrm{S_{11}}$ of the graphene patch antenna for the on-body case is \SI{-25}{\dB}. The shift in frequency is due to the high dielectric constant property of three layers of the human body in proximity with the antenna. Because of these properties of the human body, most of the radiated waves propagate through the body and dissipate in the form of heat resulting in a wider \SI{-10}{\dB} bandwidth. Due to the body absorption, the antenna gain decreases from \SI{-7.8}{\dB} to \SI{-7.2}{\dB}. The antenna gain is a figure of merit of how well the antenna converts the power supplied into radiated waves in a specific direction. For the case of the on-body condition, a lower value of the gain is obtained which is due to a decrease in the radiation efficiency, down from \SI{96}{\percent} to almost \SI{50}{\percent} (Fig. \ref{Fig 91}). Therefore, the total radiated efficiency of antenna on a flat body phantom decreases by nearly a factor of two. This is due to the higher conductivity of the outer most layer skin. The antenna total efficiency in the presence of the human body also decreases due to absorption in the lossy human body tissues. 
 
-The H and E plane radiation patterns of the graphene patch antenna on the body and free space are shown in figure \ref{fig 14b}. The radiation pattern of both states is adequately consistent at the desired resonant frequency. The main lobe with \SI{-6.87}{\dB} is obtained at the resonance of \SI{0.647}{\THz}, while an increase in the magnitude of the main lobe is observed at on body state with \SI{9.7}{\dB}. Similarly, the side lobe in the on body case is \SI{-8 }{\dB} and on free space is \SI{-2 }{\dB}  due to higher reflections from the body surface. A wearable graphene THz antenna is presented and tested on three layers of human skin to serve the wearable applications in modern THz systems to achieve high performance. The results show that the designed antenna presented at\SI{0.647}{\THz}, have a realized gain of \SI{7.8 }{\dB} and \SI{7.2 }{\dB} on free space and on-body cases respectively. The radiation efficiency dropped from 96\% to 50\% when placed on body. We believe that the antenna will perform well when positioned at a distance of \SI{1} or 2\mm from the human body surface. The antenna is regarded as a potential candidate for the future short-range wireless body area network (WBAN) Scenario.
+The H- and E- plane radiation patterns of the graphene patch antenna in the on-body and free-space conditions are shown in Fig. \ref{fig 14b}. The main lobe with \SI{-6.87}{\dB} is obtained at the resonance of \SI{0.647}{\THz}, while an increase in the magnitude of the main lobe is observed at on-body state with \SI{9.7}{\dB}. Similarly, the side lobe in the on-body case is \SI{-8}{\dB} and on free-space is \SI{-2}{\dB}  due to higher reflections from the body surface. A wearable graphene THz antenna is presented and tested on three layers of human skin to serve the wearable applications in modern THz systems to achieve high performance. The results show that the designed antenna presented at \SI{0.647}{\THz}, has a realized gain of \SI{7.8}{\dB} and \SI{7.2}{\dB} in the free-space and on-body cases respectively. The radiation efficiency dropped from \SI{96}{\percent} to \SI{50}{\percent} when placed on the body.
 % 
-\subsection{Perovskite material}
+\subsection{Perovskite Material}
 % 
-The expressions perovskite and perovskite structure are regularly utilized conversely. In fact, a perovskite is a sort of mineral that was first discovered in the Ural Mountains and named after Lev Perovskite (Russian scientist)\cite{park2016organic}. A perovskite structure is any intensify that has a similar structure as the perovskite mineral.True perovskite (the mineral) is made out of calcium, titanium and oxygen in the structure $CaTiO_3$. Then, a perovskite structure is whatever has the conventional structure $ABX_3$ and the equivalent crystallographic structure as the mineral perovskite \cite{chanana2017colour}. Perovskites have been widely inspected all around the world given their attractive properties however their application linked to photovoltaic applications and solar\cite{song2015perovskite}. The unique properties of perovskite have permitted the growth of numerous novel applications, concepts and devices \cite{song2015perovskite}. Perovskite materials display many outstanding characteristics in terms of superconductivity, ferroelectricity and high thermopower\cite{kulkarni2012mixed}. Perovskite discovered by Weber in 1978 \cite{noel2014enhanced}.The large group of the leadhalide-based perovskite-type crystals has been widely considered  recently, since these crystals display remarkable optical properties due to their structures. They are self-organised low-dimensional crystals. However $CH_3NH_3PbI_3$ perovskite has been recognized as promising materials, high charge carrier mobility, and diffusion length indicating that this material could be a potential candidate for the antenna design. On the other hand, controlling the physical properties in perovskite is quite challenging in the design and fabrication of next generation functional devices meant for high frequencies \cite{ahmad2017instability}. Moreover, Various environmental factors including moisture, ultraviolet light, and thermal stress, play a key role in the instability of perovskite materials \cite{green2014emergence}.
+Perovskite is a sort of mineral that was first discovered in the Ural Mountains and named after a Russian scientist, Lev Perovskite  \cite{park2016organic}. A perovskite structure is any intensify that has a similar structure as the perovskite mineral. True perovskite (the mineral) is made out of calcium, titanium and oxygen in the structure \ce{CaTiO3}. Then, a perovskite structure is whatever has the conventional structure \ce{ABX3} and the equivalent crystallographic structure as the mineral perovskite \cite{chanana2017colour}. Perovskites have been widely inspected all around the world given their attractive properties especially regards to their photovoltaic and plasmonic applications \cite{song2015perovskite}. Perovskite materials display many outstanding characteristics in terms of superconductivity, ferro-electricity and high thermo-power \cite{kulkarni2012mixed}. Recently, there has been an increased interest in the leadhalide-based perovskite-type crystals owing to their extra-ordinary optical properties. They are self-organised low-dimensional crystals. \ce{CH3NH3PbI3} type perovskites have been recognized as promising materials, having a high carrier mobility, and diffusion length indicating that these materials can be to design antennas. Despite the attractive properties of perovskites, controlling the physical properties during the design and fabrication phased is still quite challenging, which is currently a limitation in the realization of next generation functional devices meant for high frequencies \cite{ahmad2017instability}. Moreover, various environmental factors including moisture, ultraviolet light exposure, and thermal stress play a key role in the instability of perovskite materials \cite{green2014emergence}.
 % 
-\subsection{High Bandwidth Perovskite based Antenna for High- Resolution Bio medical Imaging at Terahertz}
 % 
- With the increasing demands of high speed, reliable and secure wireless communication and relatively lesser influence of the radiations on the user, the research trend has emphasized on the migration towards high-frequency THz spectrum \cite{ghann2017terahertz}\cite{rabbani2017liquid}. Recent research efforts have been focused to overcome the propagation and fabrication issues at THz and in developing THz sources, antennas, systems and applications \cite{siegel2002terahertz}.In the past few years, the bandwidth of \SI{0.1}{\THz} to \SI{10}{\THz} has gained attention for the analysis and is highly anticipated in the applications of bio-sensing and imaging, fast and secure wireless systems, and radar communication\cite{ranzani2013g}\cite{khatib2018response}. Numerous remarkable features of the THz band, for instance, high resolution of imaging, high confidentiality and data security, high penetrability of smoke or dust and wide available bandwidth, are promising for THz detectors, imaging and communication devices. Moreover, due to high absorption levels of THz waves by the water molecules and limited penetration ability into the human body, it has low tendency to produce hazardous ionization of biological tissues, and a favourable choice in the biomedical scanners. A high-performance THz antenna is regarded as an essential unit, and several aspects need to be considered to develop an antenna design able to fulfill the demands of THz applications \cite{chen2016research}. The progress has been made in the exploitation of novel materials instead of a copper-based radiating patch due to high loss and degradation in efficiency as a result of a decrease in skin depth and conductivity at THz. Carbon-based materials i.e. graphene, and carbon nanotubes have found promising in this regard \cite{naghdehforushha2017design}. Perovskite compounds, due to the features such as superconductivity, ferroelectricity and low cost, have gained focus in various novel applications \cite{huang2014low}. In this paper, the prospective perovskite antenna in THz bands is investigated.
-\subsection{Pervoskite Terahertz Antenna Design}
-The proposed antenna is designed and numerically analysed by using CST Microwave Studio \SI{2018}. The designed Perovskite-based antenna is tested in simulation at the room temperature of 293 K. Perovskite material is constructed in the CST by using the measured permittivity values demonstrated in \cite{green2014emergence}. Figure \ref{fig:fig 11b} shows the antenna design with the dimensions \SI{40}{\um} \times \SI{40}{\um} \times \SI{10}{\um} , consisting of a Perovskite based rectangular patch, while the ground plane and feedline are made of copper. Thin flexible film of polyamide is used as a substrate (dielectric constant,$ \epsilon_r $= 4.5 and loss tangent,$\alpha $= 0.0027.
+% 
+\subsection{Perovskite-based Antennas}
+% 
+ With the increasing demands of high speed, reliable and secure wireless communication and safety of the user in terms of radiation exposure, research trends have shown a migration towards high-frequency THz spectrum \cite{ghann2017terahertz,rabbani2017liquid}. Recent research efforts have been focused to overcome the propagation and fabrication issues at THz and in developing THz sources, antennas, systems and applications \cite{siegel2002terahertz}. Therefore, THz devices can now be found in applications such as bio-sensing and imaging, fast and secure wireless systems, and radar communication \cite{ranzani2013g,khatib2018response}. Due to high absorption levels of THz waves by the water molecules and limited penetration ability into the human body, the probability to produce hazardous ionization of biological tissues is low, which is an advantage of current medical imaging techniques such as x-rays. 
+ 
+ An efficient antenna is critical in developing a high-performance THz system. Therefore, several design aspects need to be considered to develop an antenna which is able to fulfill the demands of THz applications \cite{chen2016research}. Rapid progress has been made in the utilization of low-dimensional materials moving on from traditional copper-based radiating patch, which generate high loss and poor efficiency due to decrease in skin depth and conductivity in the THz frequency band. Carbon-based materials i.e. graphene, and carbon nano-tubes have shown promise in this regard \cite{naghdehforushha2017design}. Perovskites, due to the features such as superconductivity, ferro-electricity and low cost, have gained focus in various novel applications \cite{huang2014low}.
+%  
+% 
+% 
+\subsection{Perovskite Terahertz Antenna Design}
+% 
+The proposed antenna design is numerically analysed using CST Microwave Studio 2018 at room temperature (\SI{293}{\kelvin}). Perovskite material is simulated using the measured permittivity values as described in \cite{green2014emergence}. Figure \ref{fig:fig 11b} shows the antenna design with the dimensions \SI{40}{\um} by \SI{40}{\um} by \SI{10}{\um}, consisting of a perovskite based rectangular patch, while the ground plane and feedline are made of copper. Thin flexible film of polyamide is used as a substrate.
+% 
 \begin{figure}[hbt!]
 \begin{subfigure}{.5\textwidth}
 \centering
@@ -279,24 +295,25 @@ The proposed antenna is designed and numerically analysed by using CST Microwave
 \begin{subfigure}{.4\textwidth}
   \centering
   \includegraphics[width=.9\linewidth]{16}
-  \caption{Perovskite patch and copper feed line in the antenna prototype.}
+  \caption{perovskite patch and copper feed line in the antenna prototype.}
   \label{fig:sfigb11}
 \end{subfigure}
-\caption{Proposed perovskite-based THz antenna}
+\caption{Proposed perovskite-based THz antenna.}
 \label{fig:fig 11b}
 \end{figure}
-The reflection coefficient ($\mathrm{S_{11}}$) plot of figure \ref{Fig 17} demonstrates two significant bands while taking \SI{-10 }{\dB} as a reference. The band I ranges from\SI{3.6}{\THz},\SI{7.4}{\THz} and constitutes two dominant resonances at \SI{5.18}{\THz} and \SI{6.98}{\THz} respectively. The Band-II covers the range of \SI{8.25}{\THz}, \SI{10.0}{\THz} with an obvious resonant dip at \SI{8.8}{\THz}. The parametric analysis is carried out on the radiating length of the antenna and shown in figure. \ref{Fig 18}. It has been observed that with the increase in length from \SI{20.95}{\um} to \SI{29.7}{\um}, the resonant frequency can be tuned towards lower range.The gain and efficiency versus frequency plots are shown in figure \ref{Fig 119}, which indicates that the realized gain varies from \SI{-4.8 }{\dB} in the overall operating range. The gain magnitude is above \SI{4 }{\dB} in the almost complete bandwidth. Simulated results of \ref{Fig 119} also present good efficiency of 88\% at \SI{5.185}{\THz}, which is comparable to the reported graphene-based THz antenna in \cite{dashti2018graphene}. In addition, the radiation efficiency of the designed antenna could be improved by increasing the conductivity of perovskite film with the application of an external voltage.
+% 
+A frequency sweep of the reflection coefficient of the perovskite-based antenna is shown in Fig. \ref{Fig 17}, which demonstrates two significant bands while taking \SI{-10}{\dB} as a reference. The first band lies in the range \SIrange{3.6}{7.4}{\THz} and constitutes two dominant resonances at \SI{5.18}{\THz} and \SI{6.98}{\THz}. The second band covers \SIrange{8.25}{10}{\THz} with a notable resonant dip at \SI{8.8}{\THz}. A parametric analysis is carried out on the radiating length of the antenna, the results of which are shown in Fig. \ref{Fig 18}. It is observed that with the increase in length from \SI{20.95}{\um} to \SI{29.7}{\um}, the resonant frequency is shifted down. The gain and efficiency versus frequency plots are shown in Fig. \ref{Fig 119}, which indicate that the realized gain varies from \SI{-4.8}{\dB} in the overall operating range. The gain magnitude is above \SI{4}{\dB} throughout the frequency sweep. Simulated results as shown in Fig. \ref{Fig 119} also present good efficiency of \SI{88}{\percent} at \SI{5.185}{\THz}, which is comparable to the reported graphene-based THz antenna in \cite{dashti2018graphene}. In addition, the radiation efficiency of the designed antenna can further be improved by increasing the conductivity of perovskite film with the application of an external voltage.
 % 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=0.5\textwidth]{17}
-\caption{Simulated S11 profile of the designed perovskite-based THz antenna.}
+\caption{Simulated $\mathrm{S_{11}}$ profile of the designed perovskite-based THz antenna.}
 \label{Fig 17}
 \end{figure}
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=0.5\textwidth]{18}
-\caption{Parametric analysis of the radiating length of the designed perovskite based THz antenna}
+\caption{Parametric analysis of the radiating length of the designed perovskite based THz antenna.}
 \label{Fig 18}
 \end{figure}
 \begin{figure}[hbt!]
@@ -306,7 +323,7 @@ The reflection coefficient ($\mathrm{S_{11}}$) plot of figure \ref{Fig 17} demon
 \label{Fig 119}
 \end{figure}
 % 
-The E and H-plane radiation patterns of the designed antenna at the three major resonant frequencies are illustrated in figure.\ref{fig:fig 15}. The main lobe with \SI{4.53 }{\dB} is obtained at the resonance of \SI{5.185}{\THz}, while an increase in the magnitude of main lobe gain is observed at \SI{6.985}{\THz} and \SI{8.821}{\THz} resonances. Though the radiation is not perfect broadside in the complete operating range, yet this effect is obvious when the antenna is designed to cover a wide bandwidth. The high bandwidth, reasonable gain magnitudes and high efficiency depict that the perovskite can be deployed as a radiating element in the THz patch antennas.
+The E- and H-plane radiation patterns of the designed antenna at the three major resonant frequencies are illustrated in Fig. \ref{fig:fig 15}. The main lobe with \SI{4.53}{\dB} is obtained at the resonance of \SI{5.185}{\THz}, while an increase in the magnitude of the main lobe gain is observed at \SI{6.985}{\THz} and \SI{8.821}{\THz} resonances. Although the radiation is not perfect broadside in the complete operating range, this effect is obvious when the antenna is designed to cover a wide bandwidth. The high bandwidth, reasonable gain magnitudes and high efficiency depict that the perovskite can be deployed as a radiating element in the THz patch antennas.
 % 
 \begin{figure}[hbt!]
 \begin{subfigure}{.45\textwidth}
@@ -321,10 +338,14 @@ The E and H-plane radiation patterns of the designed antenna at the three major 
   \caption{H-Plane}
   \label{fig:sfigb15}
 \end{subfigure}
-\caption{Proposed perovskite-based THz antenna}
+\caption{Proposed perovskite-based THz antenna.}
 \label{fig:fig 15}
 \end{figure}
-The THz antennas are anticipated to ensure a high resolution imagining for the biomedical applications due to their short wavelength and high directivity. Novel materials have been developed for the potential deployment in modern THz systems to achieve high performance.  A newly developed perovskite material has been used for the antenna design which can replace the conventional metallic patches. The results show that the designed antenna covers two THz bands,\SI{3.6}{\THz},\SI{7.4}{\THz} and \SI{8.25}{\THz},\SI{10.0}{\THz} respectively. The realized gain of the antenna is above \SI{4 }{\dB} and radiation efficiency is above 70\% in overall operating bandwidth. The antenna is regarded as a potential candidate for the future short-range THz communications.
+% 
+
+The THz antennas are anticipated to ensure a high resolution imagining for the biomedical applications due to their short wavelength and high directivity. Novel materials have been developed for the potential deployment in modern THz systems to achieve high performance.  A newly developed perovskite material has been used for the antenna design which can replace the conventional metallic patches. The results show that the designed antenna covers two THz bands, \SIrange{3.6}{7.4}{\THz} and \SIrange{8.25}{10}{\THz}. The realized gain of the antenna is above \SI{4}{\dB} and radiation efficiency is above \SI{70}{\percent} in overall operating bandwidth. The antenna is regarded as a potential candidate for the future short-range THz communications.
+% 
+% 
 \bibliography{bibliography.bib}
 \bibliographystyle{unsrt}
 \end{document}
